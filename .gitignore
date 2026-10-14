@@ -15,3 +15,70 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# ==========================================
+# Build Tools (Maven & Gradle)
+# ==========================================
+target/
+build/
+out/
+bin/
+.gradle/
+build.log
+/atlassian-ide-plugin.xml
+
+# Do NOT ignore the wrappers if you want team-wide build consistency:
+# !mvnw
+# !mvnw.cmd
+# !.mvn/wrapper/maven-wrapper.properties
+# !gradlew
+# !gradle/wrapper/gradle-wrapper.properties
+
+# ==========================================
+# IDE Specific Files
+# ==========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / Spring Tool Suite (STS)
+.classpath
+.project
+.settings/
+.metadata/
+.springBeans
+.sts4-cache/
+.factorypath
+*.launch
+
+# Visual Studio Code
+.vscode/
+
+# ==========================================
+# Sensitive Configuration & Secrets
+# ==========================================
+.env
+.env.local
+*.properties.local
+*.yaml.local
+secrets.yaml
+# If you store local secrets in a specific profile:
+application-local.properties
+application-local.yaml
+
+# ==========================================
+# Log Files
+# ==========================================
+*.log
+logs/
+
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
