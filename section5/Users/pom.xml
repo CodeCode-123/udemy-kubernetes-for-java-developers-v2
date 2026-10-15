@@ -119,7 +119,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.14.1</version> <!-- Use a modern version of the compiler plugin -->
+				<version>3.16.0</version> <!-- Use a modern version of the compiler plugin -->
 				<configuration>
 					<source>25</source> <!-- Adjust according to your project's Java version -->
 					<target>25</target>
