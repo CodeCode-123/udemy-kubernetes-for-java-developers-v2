@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-deployment
+  labels:
+    app: users-ws
+    tier: backend
+  annotations:
+    kubernetes.io/change-cause: "Updated Docker image to users-ws-public-demo:1.1.2"
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: users-ws
+  template:
+    metadata:
+      labels:
+        app: users-ws
+    spec:
+      containers:
+        - name: users-ws-container
+          image: codecode123/users-ws-public-demo:1.1.2
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: test

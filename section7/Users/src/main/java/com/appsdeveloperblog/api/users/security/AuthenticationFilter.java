@@ -3,6 +3,7 @@ package com.appsdeveloperblog.api.users.security;
 import com.appsdeveloperblog.api.users.service.UsersService;
 import com.appsdeveloperblog.api.users.shared.SpringApplicationContext;
 import com.appsdeveloperblog.api.users.shared.UserDto;
+import com.appsdeveloperblog.api.users.ui.mapper.UserMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
