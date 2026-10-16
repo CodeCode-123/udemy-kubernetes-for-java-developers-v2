@@ -5,8 +5,8 @@ metadata:
   labels:
     app: users-ws
     tier: backend
-#  annotations:
-#    kubernetes.io/change-cause: "Updated Docker image to users-ws-public-demo:1.1.2"
+  annotations:
+    kubernetes.io/change-cause: "Started using users-config ConfigMap for environment variables"
 spec:
   replicas: 4
   selector:
@@ -22,6 +22,6 @@ spec:
           image: codecode123/users-ws-public-demo:1.1.1
           ports:
             - containerPort: 8082
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: test
+          envFrom:
+            - configMapRef:
+                name: users-config
